@@ -40,11 +40,18 @@ pip install -r requirements.txt
 
 4. Rename `.env.example` to `.env` and fill in your `OPENAI_API_KEY`.
 
+5. run the app
+
+```
+streamlit run dashboard.py
+```
+
 ## How tu use this app
 
 1. Sign in to ChatGPT at https://chat.openai.com
 2. In the bottom left of the page click on **Settings**
 3. Click on **Export data**
 4. Use the link in the email to download your data
+5. Deploy the app as described in [Installation](#installation)
 5. Upload the zip file using **Browse files** button
 6. Click on **Start Analysis**
