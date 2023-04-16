@@ -1,0 +1,24 @@
+# virtual environment
+venv
+
+# environment variables
+.env
+
+# python
+__pycache__
+__init__.py
+*.pyc
+
+# vscode
+.vscode/
+
+# data
+data
+export/*
+
+# logs
+*.out
+*.log
+
+# Jupyter Notebook
+.ipynb_checkpoints
