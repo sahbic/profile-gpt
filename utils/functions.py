@@ -5,6 +5,10 @@ import random
 import pandas as pd
 
 def get_ordered_random_sample(mylist, sample_size):
+    if sample_size <= 0:
+        sample_size = 1
+    if sample_size > len(mylist):
+        sample_size = len(mylist)
     sorted_sample = [
         mylist[i] for i in sorted(random.sample(range(len(mylist)), sample_size))
     ]
