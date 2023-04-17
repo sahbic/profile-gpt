@@ -2,6 +2,7 @@ import os
 import json
 import datetime
 import random
+import tiktoken
 import pandas as pd
 
 def get_ordered_random_sample(mylist, sample_size):
@@ -85,3 +86,8 @@ def preprocess_messages(user_messages, total_desired_number_of_messages = 150, n
     # remove duplicate messages but keep order
     user_messages = sorted(set(user_messages), key=lambda x: user_messages.index(x))
     return user_messages
+
+def get_number_of_tokens(messages, model_name):
+    encoding = tiktoken.encoding_for_model(model_name)
+    num_tokens = len(encoding.encode(messages))
+    return num_tokens
