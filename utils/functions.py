@@ -56,7 +56,7 @@ def get_user_messages(data_folder):
         user_messages.append(conv_messages)
     return(user_messages)
 
-def preprocess_messages(user_messages, total_desired_number_of_messages = 150, number_of_words_max = 40):
+def preprocess_messages(user_messages, total_desired_number_of_messages = 150, number_of_words_max_per_message = 40):
     # select a random sample of messages from each list of messages in user_messages
     # the goal is to have a random sample of 180 messages with the same proportion of messages from each conversation
     sampled_messages = []
@@ -67,8 +67,8 @@ def preprocess_messages(user_messages, total_desired_number_of_messages = 150, n
         conversation_messages = user_messages[conversation]
         # remove empty messages
         conversation_messages = [message for message in conversation_messages if message != ""]
-        # keep only messages with less than number_of_words_max words or else keep only first number_of_words_max words
-        conversation_messages = [message if len(message.split()) < number_of_words_max else " ".join(message.split()[:number_of_words_max]) for message in conversation_messages]
+        # keep only messages with less than number_of_words_max_per_message words or else keep only first number_of_words_max_per_message words
+        conversation_messages = [message if len(message.split()) < number_of_words_max_per_message else " ".join(message.split()[:number_of_words_max_per_message]) for message in conversation_messages]
         # remove duplicate messages but keep order
         conversation_messages = sorted(set(conversation_messages), key=lambda x: conversation_messages.index(x))
         # get number of messages to sample

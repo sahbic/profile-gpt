@@ -43,8 +43,8 @@ def browse_website(url, question):
 
 def stalk_user(user_name):
     """Stalk a user"""
-    web_search = web_search(user_name, num_results=8)
-    urls = [res["href"] for res in json.loads(str(web_search))]
+    web_search_res = web_search(user_name, num_results=8)
+    urls = [res["href"] for res in json.loads(str(web_search_res))]
     website_data = []
     for url in urls:
         website_data.append(browse_website(url, f"Extract information about the user {user_name} in a paragraph of 3 sentences."))
