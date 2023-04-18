@@ -6,6 +6,13 @@ ProfileGPT is an app that analyzes a user's profile and personality as seen by C
 
 The goal of this tool is to raise awareness about personal data usage, and the importance of responsible AI.
 
+<figure>
+  <img
+  src="images/profileGPT_AIArchitecture.png"
+  alt="AI Collaboration Architecture">
+  <center><figcaption>ProfileGPT: AI Collaboration Architecture</figcaption></center>
+</figure>
+
 Example of information that can be extracted with ProfileGPT:
 
 - **Personal Information**
@@ -15,6 +22,10 @@ Example of information that can be extracted with ProfileGPT:
 - **Political/Religious Views** : a guess on the user's political or religious views, if available from their messages.
 - **Mental Health Evaluation** : ProfileGPT evaluates the user's mental health.
 - **Predictions on Future Aspects**: ProfileGPT offers predictions on various aspects of the user's future.
+
+## Requirements
+
+-  Python >=3.8, !=3.9.7
 
 ## Installation
 
