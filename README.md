@@ -61,7 +61,7 @@ pip install -r requirements.txt
 streamlit run dashboard.py
 ```
 
-## How tu use this app
+## How to use this app?
 
 1. Sign in to ChatGPT at https://chat.openai.com
 2. In the bottom left of the page click on **Settings**
