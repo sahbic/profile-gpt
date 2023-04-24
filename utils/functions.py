@@ -78,9 +78,10 @@ def preprocess_messages(user_messages, total_desired_number_of_messages = 150, n
         if (number_of_messages_to_sample <= 3):
             if not (number_of_messages_to_sample == 0):
                 sampled_conv_messages = conversation_messages[:number_of_messages_to_sample]
+                sampled_messages.append(sampled_conv_messages)
         else:
             sampled_conv_messages = conversation_messages[:3] + get_ordered_random_sample(conversation_messages[3:], number_of_messages_to_sample - 3)
-        sampled_messages.append(sampled_conv_messages)
+            sampled_messages.append(sampled_conv_messages)
     # flatten the list of lists
     user_messages = [message for conversation in sampled_messages for message in conversation]
     # remove duplicate messages but keep order
