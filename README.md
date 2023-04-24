@@ -23,6 +23,10 @@ Example of information that can be extracted with ProfileGPT:
 - **Mental Health Evaluation** : ProfileGPT evaluates the user's mental health.
 - **Predictions on Future Aspects**: ProfileGPT offers predictions on various aspects of the user's future.
 
+## How does it work ?
+
+Detailed explanation in this [blog post](https://sahbichaieb.com/profilegpt/)
+
 ## Requirements
 
 -  Python >=3.8, !=3.9.7
@@ -57,7 +61,7 @@ pip install -r requirements.txt
 streamlit run dashboard.py
 ```
 
-## How tu use this app
+## How to use this app?
 
 1. Sign in to ChatGPT at https://chat.openai.com
 2. In the bottom left of the page click on **Settings**
